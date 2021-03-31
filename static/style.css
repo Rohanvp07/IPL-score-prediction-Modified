@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #040e11;
+    overflow: hidden;
+    box-sizing:border-box;
+    /*background-image: url('eden.jpg');*/
+    background-size: cover;
+    padding: 40px;
+    width: 100%;
+}
+
+
+section::before
+{
+    content: '';
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ef3b36;
+    clip-path: circle(65% at 100% -20%);
+}
+section::after
+{
+    content: '';
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #47aafa;
+    clip-path: circle(20% at 0% 100%);
+}
+
+
+
+.container
+{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.container .card
+{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.container .card .imgBx
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s ease-in-out;   
+}
+
+
+
+.container .card .imgBx img
+{
+    max-width: 100%;
+    margin: 0 0 20px;
+    transition: 0.5s ease-in-out;   
+
+}
+
+.container .card:hover .imgBx img
+{
+    transform: translateY(-50px) scale(1.5)
+
+}
+
+.container .card .imgBx img
+{
+    max-width: 100%;
+    margin: 0 0 20px;
+    transition: 0.5s ease-in-out;   
+
+}
+.container .card .imgBx h4
+{
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+.container .card .imgBx h5
+{
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+.container .card .imgBx .h h6
+{
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+label
+{
+    color: #fff;
+    font-weight: 600;
+}
+.container .card1
+{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+}
+
+.container .card1 .imgBx
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    transition: 0.5s ease-in-out;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
