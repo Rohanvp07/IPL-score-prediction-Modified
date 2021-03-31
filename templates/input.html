@@ -5,8 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>IPL</title>
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "static/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <link rel="shortcut icon" type="image/x-icon" href="static/lo.jpg"/>
 
         <script>
             function Battingfunction(){
@@ -68,6 +70,7 @@
                 
                 if(batting==bowling)
                 {
+                    
                     alert("Batting Team & Bowling Team can't be same");
                     return false;
                 }
@@ -132,6 +135,7 @@
                 
                 if(batting==bowling)
                 {
+                    
                     alert("Batting Team & Bowling Team can't be same");
                     return false;
                 }
@@ -142,11 +146,7 @@
                 var batting=document.getElementById("batting-team").value;
                 var bowling =document.getElementById("bowling-team").value;
                 
-                if(batting==bowling)
-                {
-                    alert("Batting Team & Bowling Team can't be same");
-                    return false;
-                }
+                
 
                 var overs=document.getElementById("overs").value;
                 var runs=document.getElementById("runs").value;
@@ -157,7 +157,12 @@
 
                 var wickets_in_prev_5=document.getElementById("wickets_in_prev_5").value;
                 
-                if(overs==5)
+                if(batting==bowling)
+                {
+                    alert("Batting Team & Bowling Team can't be same");
+                    return false;
+                }
+                else if(overs==5)
                 {
                     if(runs!=runs_in_prev_5)
                     {
@@ -173,7 +178,7 @@
                     }
                    
                 }
-                if(overs<5)
+                else if(overs<5)
                 {
                     alert("Overs can't be less than 5");
                     return false;
@@ -183,27 +188,28 @@
                     alert("Invalid value for Overs");
                     return false;
                 }
-                if(runs<0)
+                else if(runs<0)
                 {
                     alert("Invalid value for Runs");
                     return false;
                 }
-                if(wickets<0 | wickets>10)
+                else if(wickets<0 | wickets>10)
                 {
                     alert("Invalid value for Wickets");
                     return false;
                 }
-                if(runs_in_prev_5<0    | runs_in_prev_5>runs)
+                else if(runs_in_prev_5<0    | runs_in_prev_5>runs)
                 {
                     alert("Invalid value for Runs scored in previous 5 overs");
                     return false;
                 }
                
-                if(wickets_in_prev_5<0 | wickets_in_prev_5>10   | wickets_in_prev_5>wickets)
+                else if(wickets_in_prev_5<0 | wickets_in_prev_5>10   | wickets_in_prev_5>wickets)
                 {
                     alert("Invalid value for wickets in previous 5 overs");
                     return false;
                 }
+               
 
                 
                 
@@ -256,7 +262,7 @@
                                         <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
                             </select>
                             <label>Overs</label>
-                            <input type="number" class="form-control" name="overs" id="overs"  placeholder="Overs (>= 5.0) eg. 7.2" required="required">  
+                            <input type="number" step="0.1" class="form-control" name="overs" id="overs"  placeholder="Overs (>= 5.0) eg. 7.2" required="required">  
                             <br/>
                             <label>Runs</label>
                             <input type="number" class="form-control" name="runs" id="runs" placeholder="Runs eg. 64" required="required">  
@@ -275,7 +281,7 @@
                         </div>
                             <div class="h">
                                 <br>
-                                <h6 style="text-align: center; color: #fff;font-size: large;">{{score}}</h6>
+                                <p style="text-align: center; color: #fff;">{{score}}</p>
                             </div>    
                             </form>
                     </div>
