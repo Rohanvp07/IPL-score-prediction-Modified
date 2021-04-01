@@ -166,7 +166,7 @@ label
 {
     
     position: relative;
-    min-width: 230px;
+    width: 80%;
     margin: 1em;
     padding: 0.3em;
     background: linear-gradient(to right,#56ccf2,#2f80ed);
@@ -187,9 +187,6 @@ label
     form{
         width: 100%;
     }
-    .btn-sim
-    {
-        width: 80%;
-    }
+    
   }
 
