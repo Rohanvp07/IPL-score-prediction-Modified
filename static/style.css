@@ -187,5 +187,9 @@ label
     form{
         width: 100%;
     }
+    .btn-sim
+    {
+        width: 80%;
+    }
   }
 
