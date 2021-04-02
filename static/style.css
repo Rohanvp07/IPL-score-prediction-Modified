@@ -229,6 +229,10 @@ label
 
 }
 
+.copy
+{
+    font-size: 1rem;
+}
 
 @media (max-width: 417px) {
     .container {
@@ -246,6 +250,10 @@ label
     {
         width: 200px;
         height: 273px;
+    }
+    .btn-sim
+    {
+        font-size: 0.8rem;
     }
   }
 
@@ -265,21 +273,5 @@ label
     
     
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
