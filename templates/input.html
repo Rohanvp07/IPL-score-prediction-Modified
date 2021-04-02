@@ -10,25 +10,26 @@
         <link rel= "stylesheet" type= "text/css" href= "static/style.css">
         <link rel="shortcut icon" type="image/x-icon" href="static/lo.jpg"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script>
         function hide_show(){
         // call a jQuery function:
-            $(".alert").removeClass("hide");
-            $(".alert").addClass("show");
-            $(".alert").addClass("showAlert");
+            
+            $(".alert1").removeClass("hide");
+            $(".alert1").addClass("show");
+            $(".alert1").addClass("showAlert");
 
             setTimeout(function(){
-                $(".alert").removeClass("show");
-                $(".alert").addClass("hide");
+                $(".alert1").removeClass("show");
+                $(".alert1").addClass("hide");
             },5000);
         }
 
         function close_btn(){
         // call a jQuery function:
-            $(".alert").removeClass("show");
-            $(".alert").addClass("hide");
+            $(".alert1").removeClass("show");
+            $(".alert1").addClass("hide");
         }
         </script>
         <script>
@@ -92,6 +93,7 @@
                 if(batting==bowling)
                 {
                     document.getElementById("content").innerHTML="Error! Batting Team & Bowling Team can't be same";
+                    document.getElementById("a").focus();
                     hide_show();
                     return false;
                 }
@@ -157,7 +159,9 @@
                 if(batting==bowling)
                 {
                     document.getElementById("content").innerHTML="Error! Batting Team & Bowling Team can't be same"; 
+                    document.getElementById("a").focus();
                     hide_show();
+                    
                     return false;
                 }
              }
@@ -244,11 +248,13 @@
                     hide_show();
                     return false;
                 }
-               
+                var f=false;
                 if(wickets_in_prev_5<0)
                 {
                     var a="Error! Invalid value for wickets in previous 5 overs";
+                    
                     document.getElementById("content").innerHTML=a;
+                    
                     hide_show();
                     return false;
                 }
@@ -276,7 +282,7 @@
 
     <body>
         
-        <div class="alert hide" id="a">
+        <div class="alert1 hide" id="a">
             <span class="fas fa-exclamation-circle"></span>
             <span class="closebtn" onclick="closebtn()">&times;</span> 
             <span class="msg" id="content">Warning! This is Error Message</span>
@@ -358,7 +364,7 @@
                             <input type="number" class="form-control" name="wickets_in_prev_5" id="wickets_in_prev_5" required="required">
                             <br/>
                             <div style="text-align: center;">
-                                <button type="submit" class="btn-sim"><span>Predict Score</span></button>  
+                                <button type="submit" class="btn-sim" ><span>Predict Score</span></button>  
                             </div>
                             <div class="h">
                                 <br>
