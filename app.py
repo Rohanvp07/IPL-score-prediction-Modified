@@ -18,6 +18,36 @@ def pred():
    tp=[]
    
    if request.method == 'POST':
+       
+      if request.form['venue']=='Brabourne Stadium':
+          tp=tp+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='Dr DY Patil Sports Academy':
+          tp=tp+[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='Eden Gardens':
+          tp=tp+[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='Feroz Shah Kotla':
+          tp=tp+[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='M Chinnaswamy Stadium':
+          tp=tp+[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='MA Chidambaram Stadium, Chepauk':
+          tp=tp+[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='Maharashtra Cricket Association Stadium':
+          tp=tp+[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+      elif request.form['venue']=='Narendra Modi Stadium, Motera':
+          tp=tp+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+          
+      elif request.form['venue']=='Other':
+          tp=tp+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+      elif request.form['venue']=='Punjab Cricket Association Stadium, Mohali':
+          tp=tp+[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+      elif request.form['venue']=='Rajiv Gandhi International Stadium, Uppal':
+          tp=tp+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+      elif request.form['venue']=='Sawai Mansingh Stadium':
+          tp=tp+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+      elif request.form['venue']=='Wankhede Stadium':
+          tp=tp+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+      
+                  
 
       if request.form['batting-team']=='Chennai Super Kings':
          tp=tp+[1, 0, 0, 0, 0, 0, 0, 0]
