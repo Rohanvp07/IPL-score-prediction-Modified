@@ -367,18 +367,12 @@ label
     {
         font-size: 0.8rem;
     }
-     .alert1
+    .alert1
     {
-        height:15px;
+        width: 0;
+        display: none;
     }
-    .alert1 .fa-exclamation-circle
-    {
-        font-size: 15px;
-    }
-    .alert1 .msg
-    {
-        font-size: 0.7rem;
-    }
+   
   }
 
 
@@ -397,18 +391,6 @@ label
     
     
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
