@@ -50,7 +50,7 @@ section::after
     clip-path: circle(20% at 0% 100%);
 }
 
-.alert {
+.alert1 {
   position: absolute;
   z-index: 10;
   right: 0px;
@@ -62,16 +62,16 @@ section::after
   border-left: 8px solid #ffa502;
   color: black;
   opacity:0;
-  pointer-events:painted;
+  pointer-events: auto;
 }
 
-.alert.showAlert
+.alert1.showAlert
 {
     opacity: 1;
-    pointer-events: painted;
+    pointer-events: auto;
 }
 
-.alert.show
+.alert1.show
 {
     animation: show_slide 1s ease forwards;
 }
@@ -97,7 +97,7 @@ section::after
 
 
 
-.alert.hide
+.alert1.hide
 {
     animation: hide_slide 1s ease forwards;
 }
@@ -122,7 +122,7 @@ section::after
 }
 
 
-.alert .fa-exclamation-circle
+.alert1 .fa-exclamation-circle
 {
     position: absolute;
     left: 20px;
@@ -132,7 +132,7 @@ section::after
     font-size: 30px;
 }
 
-.alert .msg
+.alert1 .msg
 {
     padding: 0 15px;
     font-size: 0.9rem;
