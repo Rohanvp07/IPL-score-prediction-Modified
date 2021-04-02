@@ -45,7 +45,7 @@
                 else if(strUser=='Kings XI Punjab')
                 {
                     document.getElementById("batting").src = "static/PUN.png";      
-                    document.getElementById("bat").innerHTML = "Kings XI Punjab";
+                    document.getElementById("bat").innerHTML = "Punjab Kings";
                     document.getElementById("bat").style.color = "#f50000";           
                 }
                 else if(strUser=='Royal Challengers Bangalore')
@@ -57,7 +57,7 @@
                 else if(strUser=='Delhi Daredevils')
                 {
                     document.getElementById("batting").src = "static/DC.png";    
-                    document.getElementById("bat").innerHTML = "Delhi Daredevils";
+                    document.getElementById("bat").innerHTML = "Delhi Capitals";
                     document.getElementById("bat").style.color = "#3641d9";             
                 }
                 else if(strUser=='Sunrisers Hyderabad')
@@ -107,7 +107,7 @@
                 else if(strUser=='Kings XI Punjab')
                 {
                     document.getElementById("bowling").src = "static/PUN.png"; 
-                    document.getElementById("bowl").innerHTML = "Kings XI Punjab";               
+                    document.getElementById("bowl").innerHTML = "Punjab Kings";               
                     document.getElementById("bowl").style.color = "#f50000";
                 }
                 else if(strUser=='Royal Challengers Bangalore')
@@ -120,7 +120,7 @@
                 else if(strUser=='Delhi Daredevils')
                 {
                     document.getElementById("bowling").src = "static/DC.png"; 
-                    document.getElementById("bowl").innerHTML = "Delhi Daredevils";               
+                    document.getElementById("bowl").innerHTML = "Delhi Capitals";               
                     document.getElementById("bowl").style.color = "#3641d9";             
 
                 }
@@ -163,7 +163,7 @@
                     alert("Batting Team & Bowling Team can't be same");
                     return false;
                 }
-                else if(overs==5)
+                if(overs==5)
                 {
                     if(runs!=runs_in_prev_5)
                     {
@@ -179,48 +179,43 @@
                     }
                    
                 }
-                else if(overs<5)
+                if(overs<5)
                 {
                     alert("Overs can't be less than 5");
                     return false;
                 }
-                else if(overs>20)
+                if(overs>20)
                 {
                     alert("Invalid value for Overs");
                     return false;
                 }
-                else if(runs<0)
+                if(runs<0)
                 {
                     alert("Invalid value for Runs");
                     return false;
                 }
-                else if(wickets<0 | wickets>10)
+                if(wickets<0 | wickets>10)
                 {
                     alert("Invalid value for Wickets");
                     return false;
                 }
-                else if(runs_in_prev_5<0)
-                {
-                    alert("Invalid value for Runs scored in previous 5 overs");
-                    return false;
-                }
-                else if(runs_in_prev_5>runs)
+                if(runs_in_prev_5<0)
                 {
                     alert("Invalid value for Runs scored in previous 5 overs");
                     return false;
                 }
                
-                else if(wickets_in_prev_5<0)
+                if(wickets_in_prev_5<0)
                 {
                     alert("Invalid value for wickets in previous 5 overs");
                     return false;
                 }
-                else if(wickets_in_prev_5>10)
+                if(wickets_in_prev_5>10)
                 {
                     alert("Invalid value for wickets in previous 5 overs");
                     return false;
                 }
-                else if(wickets_in_prev_5>wickets)
+                if(wickets_in_prev_5>wickets)
                 {
                     alert("Invalid value for wickets in previous 5 overs");
                     return false;
@@ -240,7 +235,7 @@
             <div class="container">
                 <div class="card">
                     <div class="imgBx">
-                        <img id="batting" src="static/—Pngtree—pattern cricket bat clipart ball_6024969.png">
+                        <img id="batting" src="/static/—Pngtree—pattern cricket bat clipart ball_6024969.png">
                         <h4>Batting Team</h4>
                         <h5 id='bat'></h5>
                     </div>
@@ -259,9 +254,9 @@
                                         <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                                         <option value="Chennai Super Kings">Chennai Super Kings</option>
                                         <option value="Rajasthan Royals">Rajasthan Royals</option>
-                                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                                        <option value="Kings XI Punjab">Punjab Kings</option>
                                         <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
-                                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                                        <option value="Delhi Daredevils">Delhi Capitals</option>
                                         <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
                             </select>
                             <label>Bowling-team</label>
@@ -271,9 +266,9 @@
                                         <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                                         <option value="Chennai Super Kings">Chennai Super Kings</option>
                                         <option value="Rajasthan Royals">Rajasthan Royals</option>
-                                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                                        <option value="Kings XI Punjab">Punjab Kings</option>
                                         <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
-                                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                                        <option value="Delhi Daredevils">Delhi Capitals</option>
                                         <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
                             </select>
                             <label>Overs</label>
@@ -286,10 +281,10 @@
                             <input type="number" class="form-control" name="wickets" id="wickets" placeholder="Wickets eg. 4" required="required">  
                             <br/>
                             <label>Runs scored in previous 5 Overs</label>
-                            <input type="number" class="form-control" name="runs_in_prev_5" id="runs_in_prev_5"  required="required">
+                            <input type="number" class="form-control" name="runs_in_prev_5" id="runs_in_prev_5" required="required">
                             <br/>
                             <label>Wickets taken in previous 5 Overs</label>
-                            <input type="number" class="form-control" name="wickets_in_prev_5" id="wickets_in_prev_5"  required="required">
+                            <input type="number" class="form-control" name="wickets_in_prev_5" id="wickets_in_prev_5" required="required">
                             <br/>
                             <div style="text-align: center;">
                                 <button type="submit" class="btn-sim"><span>Predict Score</span></button>  
@@ -303,7 +298,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img id="bowling" src="static/—Pngtree—cricket ball in red colour_5988338.png">
+                        <img id="bowling" src="/static/—Pngtree—cricket ball in red colour_5988338.png">
                         <h4>Bowling Team</h4>
                         <h5 id='bowl'></h5>
                     </div>
