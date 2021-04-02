@@ -195,7 +195,7 @@ label
 }
 .btn-sim:hover::after
 {
-    filter: blur(15px);
+    filter: blur(5px);
 }
 .btn-sim:hover
 {
@@ -253,7 +253,7 @@ label
     }
     .btn-sim
     {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
   }
 
