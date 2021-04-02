@@ -369,7 +369,7 @@ label
     }
      .alert1
     {
-        width: 50%;
+        width: 70%;
     }
     .alert1 .fa-exclamation-circle
     {
@@ -377,7 +377,7 @@ label
     }
     .alert1 .msg
     {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
   }
 
