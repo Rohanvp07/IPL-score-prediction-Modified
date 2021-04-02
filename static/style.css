@@ -7,7 +7,6 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-
 section
 {
     display: flex;
@@ -22,7 +21,6 @@ section
     padding: 40px;
     width: 100%;
 }
-
 
 section::before
 {
@@ -47,7 +45,11 @@ section::after
     clip-path: circle(20% at 0% 100%);
 }
 
-
+.foot
+{
+    text-align: center;
+    font-size: black;
+}
 
 .container
 {
@@ -168,13 +170,65 @@ label
     position: relative;
     width: 80%;
     margin: 1em;
-    padding: 0.3em;
+    padding: 0.1em;
     background: linear-gradient(to right,#56ccf2,#2f80ed);
     border:0;
     cursor: pointer;
     border-radius: 20px;
 
 }
+.btn-sim::before,
+.btn-sim::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right,#56ccf2,#2f80ed);
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.btn-sim:hover::before{
+    filter: blur(5px);
+}
+.btn-sim:hover::after
+{
+    filter: blur(15px);
+}
+.btn-sim:hover
+{
+   animation: hue 3s linear infinite; 
+}
+@keyframes hue {
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+.btn-sim span
+{
+    position: relative;
+    z-index: 3;
+    display: block;
+    padding: 0.8rem;
+    font-family:'Montserrat',sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #2c2e36;
+    border-radius: 18px;
+
+}
+
 
 @media (max-width: 417px) {
     .container {
@@ -184,9 +238,48 @@ label
     {
         width: 100%;
     }
+
+    form{
+        width: 100%;
+    }
+    .container .card .imgBx
+    {
+        width: 200px;
+        height: 273px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container .card1
+    {
+        width: 100%;
+    }
+
     form{
         width: 100%;
     }
     
+    
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
