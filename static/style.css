@@ -367,6 +367,18 @@ label
     {
         font-size: 0.8rem;
     }
+     .alert1
+    {
+        width: 50%;
+    }
+    .alert1 .fa-exclamation-circle
+    {
+        font-size: 15px;
+    }
+    .alert1 .msg
+    {
+        font-size: 0.5rem;
+    }
   }
 
 
