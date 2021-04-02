@@ -197,7 +197,7 @@
                     if(runs!=runs_in_prev_5)
                     {
                         var a='Error! Invalid value for Runs and Runs in prev 5 overs, since Overs are 5 then Runs and Runs in prev 5 overs must match';
-                        
+                        alert(a);
                         document.getElementById("content").innerHTML=a;
                         hide_show();
                         return false;
@@ -207,6 +207,7 @@
                     if(wickets!=wickets_in_prev_5)
                     {
                         var a= 'Error! Invalid value for Wickets and Wickets in prev 5 overs, since Overs are 5 then Wickets and Wickets in prev 5 overs must match';
+                        alert(a);
                         document.getElementById("content").innerHTML=a;
                         hide_show();
                         return false;
@@ -216,6 +217,7 @@
                 if(overs<5)
                 {
                     var a="Error! Overs can't be less than 5";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
@@ -223,6 +225,7 @@
                 if(overs>20)
                 {
                     var a="Error! Invalid value for Overs";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
@@ -230,6 +233,7 @@
                 if(runs<0)
                 {
                     var a ="Error! Invalid value for Runs";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
@@ -237,6 +241,7 @@
                 if(wickets<0 | wickets>10)
                 {
                     var a="Error! Invalid value for Wickets";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
@@ -244,6 +249,7 @@
                 if(runs_in_prev_5<0)
                 {
                     var a="Error! Invalid value for Runs scored in previous 5 overs";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
@@ -252,7 +258,7 @@
                 if(wickets_in_prev_5<0)
                 {
                     var a="Error! Invalid value for wickets in previous 5 overs";
-                    
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     
                     hide_show();
@@ -261,6 +267,7 @@
                 if(wickets_in_prev_5>10)
                 {
                     var a="Error! Invalid value for wickets in previous 5 overs";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
@@ -268,6 +275,7 @@
                 if(wickets_in_prev_5>wickets)
                 {
                     var a="Error! Invalid value for wickets in previous 5 overs";
+                    alert(a);
                     document.getElementById("content").innerHTML=a;
                     hide_show();
                     return false;
